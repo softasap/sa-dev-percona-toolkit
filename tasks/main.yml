@@ -1,3 +1,10 @@
 ---
 # tasks file for sa-dev-percona-toolkit
+  - name: Include release related vars
+    include_vars: "{{ item }}"
+    with_first_found:
+     - "{{root_dir}}/defaults/{{ansible_distribution_release}}_vars.yml"
+     - "{{root_dir}}/defaults/default_vars.yml"
+
+
   - include: tasks_percona_toolkit.yml

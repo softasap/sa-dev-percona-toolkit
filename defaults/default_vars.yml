@@ -1,0 +1,5 @@
+---
+  apt_source: { 
+                  name: "trusty"
+              }
+
